@@ -61,14 +61,9 @@ install_fun()
     # fi
     uname -a
     echo -e "\033[33m Downloading and executing node_exporter......\033[0m"
-    #wget -c -t0 https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
-
-    #wget -c -t0 https://github-jiasu.oss-cn-hangzhou.aliyuncs.com/plus/node_exporter-1.3.1.linux-amd64.tar.gz
-    #使用个人阿里云：默认对于 Linux 实例，默认在管理员 root 用户的 home 目录下；对于 Windows 实例，默认在 C:\Windows\system32 目录
-
-    #使用公司内网oss，文件单独设置公共读权限，无链接过期时间300s
-    wget -c -t0 http://leqi-ai.oss-cn-shanghai-internal.aliyuncs.com/result/node_exporter-1.3.1.linux-amd64.tar.gz 
-
+    wget -c -t0 https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
+    #此处路径可更换为自己源，已脱敏
+    
     tar -xvzf node_exporter-1.3.1.linux-amd64.tar.gz 
     cd node_exporter-1.3.1.linux-amd64/
     echo -e "\033[33m Download and unzip successfully, now testing if the port of 9100 is occupied or not ...... \033[0m"
